@@ -29,11 +29,11 @@ namespace kaleidoscope {
 
 EventHandlerResult StickyMouseButtons::beforeReportingState() {
   if (left)
-    kaleidoscope::hid::pressMouseButtons(KEY_MOUSE_BTN_L);
+    Kaleidoscope.hid().mouse().pressButtons(KEY_MOUSE_BTN_L);
   if (middle)
-    kaleidoscope::hid::pressMouseButtons(KEY_MOUSE_BTN_M);
+    Kaleidoscope.hid().mouse().pressButtons(KEY_MOUSE_BTN_M);
   if (right)
-    kaleidoscope::hid::pressMouseButtons(KEY_MOUSE_BTN_R);
+    Kaleidoscope.hid().mouse().pressButtons(KEY_MOUSE_BTN_R);
   return EventHandlerResult::OK;
 }
 
